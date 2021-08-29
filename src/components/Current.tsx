@@ -3,23 +3,11 @@ import { useEffect, useState } from "react"
 
 type DataType = {
   time: {
-    updated: string,
-    updatedISO: string,
-    updateduk: string
+    updated: string
   },
-  disclaimer: string,
   bpi: {
-    USD: {
-      code: string,
-      rate: string,
-      description: string,
-      rate_float: string
-    },
     THB: {
-      code: string,
       rate: string,
-      description: string,
-      rate_float: string
     }
   }
 }
@@ -33,6 +21,7 @@ const Current = () => {
   const fetchAPI = async () => {
     try {
       const resp = await axios.get<DataType>('https://api.coindesk.com/v1/bpi/currentprice/thb.json')
+      console.dir(resp.data)
       setData(resp.data)
       setLoading(false)
       setError(false)

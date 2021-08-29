@@ -8,7 +8,7 @@ const History = () => {
   const [endDate, setEndDate] = useState<string | null>(null)
   const hist = useHistory()
 
-  const check = () => {
+  const Getdata = () => {
 
     var startdate = null, enddate = null;
     if (startDate != null)
@@ -35,7 +35,7 @@ const History = () => {
         <input type='date' onChange={e => { setEndDate(e.target.value); }}></input>
         <br />
         <br />
-        <button onClick={check}>Get data</button>
+        <button onClick={Getdata}>Get data</button>
       </div>
     </div>
   )

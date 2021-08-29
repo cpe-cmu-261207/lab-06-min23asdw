@@ -7,7 +7,6 @@ type DataType = {
   disclaimmer: string
   time: {
     updated: string
-    updatedISO: string
   }
 }
 
@@ -22,6 +21,7 @@ const SubHistory = () => {
   const fetchData = async () => {
     try {
       const resp = await axios.get<DataType>(`https://api.coindesk.com/v1/bpi/historical/close.json?currency=THB&start=${startDate}&end=${endDate}`)
+      // console.dir(resp.data)
       setData(resp.data)
       setLoading(false)
       setError(false)
