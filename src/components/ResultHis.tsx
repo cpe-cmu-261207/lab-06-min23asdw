@@ -10,7 +10,7 @@ type DataType = {
   }
 }
 
-const SubHistory = () => {
+const ResultHis = () => {
   const [data, setData] = useState<DataType | null>(null)
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<boolean>(false)
@@ -80,4 +80,4 @@ const SubHistory = () => {
   )
 }
 
-export default SubHistory
+export default ResultHis

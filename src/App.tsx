@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Current from './components/Current';
 import History from './components/History';
-import SubHistory from './components/ResultHis';
+import ResultHis from './components/ResultHis';
 import About from './components/About';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <History />
         </Route>
         <Route path='/history/result'>
-          <SubHistory />
+          <ResultHis />
         </Route>
         <Route path='/about'>
           <About />
